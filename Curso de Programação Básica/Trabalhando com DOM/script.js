@@ -6,12 +6,15 @@ var papel = canvas.getContext("2d");
 var x = 50;
 var y = 50;
 
-papel.beginPath();
-papel.strokeStyle = "red";
-papel.lineWidth = 3;
-papel.moveTo(x,y);
-papel.lineTo(200,200);
-papel.stroke();
-papel.closePath();
+desenha("red", x, y, 200, 200)
+desenha("green", x+150, y, 200, 200)
 
-
+function desenha(cor, xInicial, yInicial, xFinal, yFinal) {
+    papel.beginPath();
+    papel.strokeStyle = cor;
+    papel.lineWidth = 3;
+    papel.moveTo(xInicial, yInicial);
+    papel.lineTo(xFinal, yFinal);
+    papel.stroke();
+    papel.closePath();
+}
