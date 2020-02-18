@@ -1,0 +1,145 @@
+* {
+    font: 12px sans-serif;
+}
+
+body {
+    background-image: url(Images/FUNDO.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 100%;
+}
+
+h1 {
+    font-size: 12px;
+}
+
+.button {
+    width: 115px;
+    height: 25px;
+    background-color: #99ca3f;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+header>nav {
+    float: right;
+}
+
+header>nav>a {
+    padding: 25px 10px;
+    text-decoration: none;
+    color: : white;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+header>nav>a:hover:after {
+    width: 49.3px;
+    height: 0;
+    border: solid 3px #ffffff;
+}
+
+header {
+    margin-top: 25px;
+    height: 80px;
+}
+
+#logo {
+    height: 350px;
+}
+
+section {
+    text-align: center;
+}
+
+section>p {
+    color: white;
+}
+
+section>figure {
+    float: left;
+}
+
+.logotype {
+    width: 30%;
+}
+
+#diferenciais>figure {
+    width: 300px;
+    height: 350px;
+    border-radius: 5px;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.14);
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+/* ainda nao fiz o html dessa parte do depoimento*/
+
+.retangulo-depoimento {
+    width: 100%;
+    height: 900px;
+    background-color: #98ca3f;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-depoimento {
+    width: 456.5px;
+    height: 540.4px;
+}
+
+.texto-depoimento {
+    width: 421px;
+    height: 366px;
+    font-family: Aileron;
+    font-size: 28px;
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: left;
+    color: #182c3f;
+}
+
+.slider-seletor-inativo {
+    width: 78.8px;
+    height: 9.2px;
+    border-radius: 5.5px;
+    background-color: #ffffff;
+}
+
+.slider-seletor-ativo {
+    width: 78.8px;
+    height: 9.2px;
+    border-radius: 5.5px;
+    background-color: #182c3f;
+}
+
+#recipes {
+    display: grid;
+    width: 60%;
+    margin: auto;
+    text-align: left;
+}
+
+footer {
+    font-family: Aileron;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    color: #54565a;
+    display: flex;
+    align-items: center;
+}
