@@ -1,71 +1,20 @@
-var canvas = document.getElementById(“meu-canvas”);
-var papel = canvas.getContext(“2d”);
+var canvas = document.getElementById("meu-canvas");
 
-var teclas = {
-Up: 38,
-Right: 39,
-Down: 40,
-Left: 37
-}
+var papel = canvas.getContext("2d");
 
-document.addEventListener(“mousedown”, comecarDesenho);
-document.addEventListener(“mousemove”, desenharMouse);
-document.addEventListener(“mouseup”, pararDesenho);
-document.addEventListener(“keydown”, desenharTeclado);
 
-var x = 100;
-var y = 100;
-var mousePressionado = false;
+var x = 50;
+var y = 50;
 
-function desenhaLinha(color, xinicial, yinicial, xfinal, yfinal, papel) {
-papel.beginPath();
-papel.strokeStyle = color;
-papel.lineWidth = 3;
-papel.moveTo(xinicial, yinicial);
-papel.lineTo(xfinal, yfinal);
-papel.stroke();
-papel.closePath();
-}
+desenha("red", x, y, 200, 200)
+desenha("green", x+150, y, 200, 200)
 
-function comecarDesenho(event) {
-console.log(event);
-mousePressionado = true;
-x = event.layerX;
-y = event.layerY;
-}
-
-function desenharTeclado(evento) {
-var cor = “green”;
-var velocidadeMovimento = 10;
-switch (evento.keyCode) {
-case teclas.Up:
-desenhaLinha(cor, x, y, x, y - velocidadeMovimento, papel);
-y = y - velocidadeMovimento;
-break;
-case teclas.Down:
-desenhaLinha(cor, x, y, x, y + velocidadeMovimento, papel);
-y = y + velocidadeMovimento;
-break;
-case teclas.Left:
-desenhaLinha(cor, x, y, x - velocidadeMovimento, y, papel);
-x = x - velocidadeMovimento;
-break;
-case teclas.Right:
-desenhaLinha(cor, x, y, x + velocidadeMovimento, y, papel);
-x = x + velocidadeMovimento;
-break;
-}
-}
-
-function desenharMouse(evClick) {
-if (mousePressionado == true) {
-var corMouse = “orange”;
-desenhaLinha(corMouse, x, y, evClick.clientX, evClick.clientY, papel);
-x = evClick.clientX;
-y = evClick.clientY;
-}
-}
-
-function pararDesenho() {
-mousePressionado = false;
+function desenha(cor, xInicial, yInicial, xFinal, yFinal) {
+    papel.beginPath();
+    papel.strokeStyle = cor;
+    papel.lineWidth = 3;
+    papel.moveTo(xInicial, yInicial);
+    papel.lineTo(xFinal, yFinal);
+    papel.stroke();
+    papel.closePath();
 }
