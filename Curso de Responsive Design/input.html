@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" defer></script>
+    <script src="validator.js" defer></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>Entre em contato</h1>
+        <div class="col-12 col-md-6 offset-md-3">
+            <form class="needs-validation" novalidate>
+                <div class="row">
+                    <div class="col col-md-6 mb-3">
+                        <label for="firstName">Nome</label>
+                        <input type="text" name="first-name" placeholder="Nome" id="firstName" class="form-control"
+                            required>
+                        <div class="invalid-feedback">Campo obrigatório</div>
+                    </div>
+
+                    <div class="col col-md-6 mb-3">
+                        <label for="lastName">Sobrenome</label>
+                        <input type="text" name="last-name" placeholder="Sobrenome" id="lastName" class="form-control"
+                            required>
+                        <div class="invalid-feedback">Campo obrigatório</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col mb-3">
+                        <label for="email">E-mail</label>
+                        <input type="email" placeholder="Digite seu e-mail" value="" id="email" class="form-control"
+                            required>
+                        <div class="invalid-feedback">Campo obrigatório</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col mb-3">
+                        <select name="" id="subject" class="form-control" required>
+                            <option value="value1">Dúvida</option>
+                            <option value="value2">Sugestão</option>
+                            <option value="value3">Reclamação</option>
+                            <option value="value4">Elogios</option>
+                            <option value="value5">Outros</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col mb-3">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" cols="30" rows="5" class="form-control" required></textarea>
+                        <div class="invalid-feedback">Campo obrigatório</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col text-center"><button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>
